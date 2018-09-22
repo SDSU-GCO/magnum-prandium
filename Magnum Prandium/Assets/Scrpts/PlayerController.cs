@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed=1;
+    public float moveHorizontal;
+    public float  moveVertical;
 
     private Rigidbody2D rb;
 
@@ -13,13 +15,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0);
+        Vector2 movement = new Vector2(moveHorizontal * speed * Time.deltaTime, Time.deltaTime * moveVertical * speed);
 
-        rb.velocity = (movement * speed);
+        rb.velocity = movement;
     }
 }
