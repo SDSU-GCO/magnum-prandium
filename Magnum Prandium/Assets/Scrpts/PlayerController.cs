@@ -3,15 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour{
 
-<<<<<<< HEAD
     public float RotationSpeed = 1;
     public float ForwardSpeed  = 1;
     
-=======
-    public float speed=1;
-    public float moveHorizontal;
-    public float  moveVertical;
->>>>>>> 35aa000aeba858c0602deb35c1696a92a5c06720
 
     Rigidbody2D RigidbodyRef;
 
@@ -20,7 +14,6 @@ public class PlayerController : MonoBehaviour{
         Debug.Assert(RigidbodyRef != null);
         }
 
-<<<<<<< HEAD
     void Update(){
         
         //Check for inputs
@@ -34,15 +27,3 @@ public class PlayerController : MonoBehaviour{
         
         }
     }
-=======
-    void Update()
-    {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
-
-        Vector2 movement = new Vector2(moveHorizontal * speed * Time.deltaTime, Time.deltaTime * moveVertical * speed);
-
-        rb.velocity = movement;
-    }
-}
->>>>>>> 35aa000aeba858c0602deb35c1696a92a5c06720
