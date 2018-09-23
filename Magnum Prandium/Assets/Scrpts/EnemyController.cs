@@ -7,11 +7,19 @@ public class EnemyController : MonoBehaviour {
     float speed = 2;
     GameObject prey = null;
     new Rigidbody2D rigidbody2D = null;
+    EnemyData enemyData = null;
 
     private void OnEnable()
     {
-        prey = GameObject.Find("Player");
+        enemyData = SceneController.sceneData.GetComponent<EnemyData>();
+        enemyData.enemyCount++;
+        prey = GameObject.FindGameObjectWithTag("Player");
         rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnDisable()
+    {
+        enemyData.enemyCount--;
     }
 
     // Update is called once per frame

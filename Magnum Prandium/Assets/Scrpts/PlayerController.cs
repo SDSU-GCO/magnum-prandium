@@ -37,12 +37,7 @@ public class PlayerController : MonoBehaviour
 
         gameObject.transform.rotation *= Quaternion.AngleAxis(RotationSpeed * RotationInput, new Vector3(0, 0, 1));
         RigidbodyRef.velocity = transform.up * ForwardSpeed * ForwardInput;
-
-        if (GameManager.globalDataObject.GetComponent<PlayerData>().HP <= 0)
-        {
-            Debug.Log("Player ded");
-        }
-
+        
 
         if (Input.GetButtonDown("Dash") && dashCoolDown <= 0)
         {

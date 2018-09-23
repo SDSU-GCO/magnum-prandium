@@ -18,4 +18,16 @@ public class SceneController : MonoBehaviour {
         Debug.Assert(sceneLogic == this, "There should only be one scene logic in the scene!, found: " + sceneLogic + " Expected: " + this);
         sceneLogic = null;
     }
+
+    private void Update()
+    {
+        if(sceneData.GetComponent<PlayerData>().HP <= 0)
+        {
+            Debug.Log("Player ded");
+        }
+        if(sceneData.GetComponent<EnemyData>().enemyCount<=0)
+        {
+            Debug.Log("Congrats on killing all the badies!  You win!");
+        }
+    }
 }
