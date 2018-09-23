@@ -9,15 +9,15 @@ public class EnemyController : MonoBehaviour {
     new Rigidbody2D rigidbody2D = null;
     EnemyData enemyData = null;
 
-    private void OnEnable()
+    private void Start()
     {
         enemyData = SceneController.sceneData.GetComponent<EnemyData>();
         enemyData.enemyCount++;
-        prey = GameObject.FindGameObjectWithTag("Player");
+        prey = GameObject.FindGameObjectWithTag("Protagonist");
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         enemyData.enemyCount--;
     }

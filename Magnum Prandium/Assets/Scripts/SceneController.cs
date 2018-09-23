@@ -21,11 +21,11 @@ public class SceneController : MonoBehaviour {
 
     private void Update()
     {
-        if(sceneData.GetComponent<PlayerData>().HP <= 0)
+        if(GameManager.globalDataObject.GetComponent<PlayerData>().HP <= 0)
         {
             Debug.Log("Player ded");
         }
-        if(sceneData.GetComponent<EnemyData>().enemyCount<=0)
+        else if(sceneData.GetComponent<EnemyData>().enemyCount<=0)
         {
             Debug.Log("Congrats on killing all the badies!  You win!");
         }

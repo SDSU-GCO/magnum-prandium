@@ -193,9 +193,8 @@ Transform:
 --- !u!114 &347821762
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114794284668798180, guid: 559cc3c1934676847944e5c771ac3424,
-    type: 2}
-  m_PrefabInternal: {fileID: 681309805}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347821760}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -241,7 +240,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 559cc3c1934676847944e5c771ac3424, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &912877881
