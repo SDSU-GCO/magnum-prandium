@@ -1,13 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager gameManager = null;
-    public static GameObject DataObjects = null;
-    List<string> openScenes = new List<string>();
 
     private void Awake()
     {
@@ -16,41 +13,17 @@ public class GameManager : MonoBehaviour {
     }
     private void OnDestroy()
     {
-        Debug.Assert(gameManager == this, "There should only be one game manager in the game!, found: " + gameManager + " Expected: " + this );
+        Debug.Assert(gameManager == this, "There should only be one game manager in the game!, found: " + gameManager + " Expected: "+this );
         gameManager = null;
     }
 
-    private void Start()
-    {
-        DataObjects = GameObject.Find("DataObjects");
-
-
-
-        //start game
-        switchScene("WeaponsTesting");
-    }
-
-    void switchScene(string targetScene)
-    {
-        foreach (string sceneName in openScenes)
-        {
-            SceneManager.UnloadSceneAsync(sceneName);
-        }
-        openScenes.Add(targetScene);
-        SceneManager.LoadSceneAsync(targetScene, LoadSceneMode.Additive);
-    }
-
-    void switchScene(List<string> targetScene)
-    {
-        foreach (string sceneName in openScenes)
-        {
-            SceneManager.UnloadSceneAsync(sceneName);
-        }
-        foreach(string sceneName in targetScene)
-        {
-            openScenes.Add(sceneName);
-            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-        }
-    }
-    
+    // Use this for initialization
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }
