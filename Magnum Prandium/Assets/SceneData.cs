@@ -3,21 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneData : MonoBehaviour {
-
-
-    private void Awake()
+    
+    private void Start()
     {
-        Debug.Assert(sceneLogic == null, "There should only be one scene logic in the scene!, found: " + sceneLogic + " Expected: null");
-        sceneLogic = this;
+        Debug.Assert(SceneLogic.sceneData == null, "There should only be one scene data in the scene!, found: " + SceneLogic.sceneData + " Expected: null");
+        SceneLogic.sceneData = gameObject;
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnDestroy()
+    {
+        Debug.Assert(SceneLogic.sceneData == gameObject, "There should only be one scene data in the scene!, found: " + SceneLogic.sceneData + " Expected: " + gameObject);
+        SceneLogic.sceneData = gameObject;
+    }
 }
