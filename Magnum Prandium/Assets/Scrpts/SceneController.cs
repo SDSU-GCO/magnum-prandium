@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneLogic : MonoBehaviour {
+public class SceneController : MonoBehaviour {
 
-    public static SceneLogic sceneLogic = null;
+    public static SceneController sceneLogic = null;
     public static GameObject sceneData = null;
 
     private void Awake()

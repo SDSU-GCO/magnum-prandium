@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager gameManager = null;
+    public static GameObject globalDataObject = null;
 
     private void Awake()
     {
@@ -19,11 +20,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        globalDataObject = GameObject.Find("globalDataObject");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
