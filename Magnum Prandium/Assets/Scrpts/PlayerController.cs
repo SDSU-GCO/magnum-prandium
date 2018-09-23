@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour
     public float RotationSpeed = 1;
     public float ForwardSpeed = 1;
     Rigidbody2D RigidbodyRef;
-    PlayerData PlayerData = GameManager.DataObjects.GetComponent<PlayerData>();
-    
+    PlayerData playerData = null;
+
+    private void Awake()
+    {
+        playerData = GameManager.DataObjects.GetComponent<PlayerData>();
+    }
 
     public void takeDamage(int damage)
     {
-        PlayerData.HP -= damage;
+        playerData.HP -= damage;
     }
 
     void Start()
@@ -33,7 +37,7 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.rotation *= Quaternion.AngleAxis(RotationSpeed * RotationInput, new Vector3(0, 0, 1));
         RigidbodyRef.velocity = transform.up * ForwardSpeed * ForwardInput;
 
-        if (PlayerData.HP <= 0)
+        if (playerData.HP <= 0)
         {
             Debug.Log("Player ded");
         }
