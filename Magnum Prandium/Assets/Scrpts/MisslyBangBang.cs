@@ -8,7 +8,6 @@ public class MisslyBangBang : MonoBehaviour {
     [SerializeField]
     float lifetimeInSeconds=10;
 
-    
     // Update is called once per frame
     void Update ()
     {
@@ -19,11 +18,14 @@ public class MisslyBangBang : MonoBehaviour {
         }
 	}
 
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Enemy"))
         {
             GameObject.Destroy(collision.gameObject);
+
             GameObject.Destroy(gameObject);
         }
     }
