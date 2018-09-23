@@ -3,9 +3,16 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public float RotationSpeed = 1;
-    public float ForwardSpeed = 1;
+    float dashCoolDown = 0;
+    Vector2 dashBonusSpeed;
+    [SerializeField]
+    float dashCoolDownDefault = 2;
+    [SerializeField]
+    float dashMultiplier = 2.5f;
+    [SerializeField]
+    float RotationSpeed = 1;
+    [SerializeField]
+    float ForwardSpeed = 1;
     Rigidbody2D RigidbodyRef;
     
     public void takeDamage(int damage)
@@ -35,6 +42,20 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Player ded");
         }
+
+
+        if (Input.GetButtonDown("Dash") && dashCoolDown <= 0)
+        {
+            dashBonusSpeed = RigidbodyRef.velocity * (dashMultiplier - 1);
+            dashCoolDown = dashCoolDownDefault;
+        }
+
+        if(dashCoolDown>0)
+        {
+            RigidbodyRef.velocity += dashBonusSpeed * ((dashCoolDown) / dashCoolDownDefault);
+        }
+
+        dashCoolDown = Mathf.Max(0, dashCoolDown - Time.deltaTime);
 
     }
 }
