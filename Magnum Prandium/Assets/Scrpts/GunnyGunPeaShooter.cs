@@ -10,14 +10,15 @@ public class GunnyGunPeaShooter : MonoBehaviour
     GameObject misslePrefab = null;
     [SerializeField]
     float missleSpeed = 1;
+    float coolDownMissle = 0;
     [SerializeField]
-    float coolDownMissle = 0.25f;
-    float coolDownMissleDefault = 0;
+    float coolDownMissleDefault = 0.25f;
 
     private void OnEnable()
     {
         coolDownMissleDefault = coolDownMissle;
     }
+    
 
     // Update is called once per frame
     void Update()
