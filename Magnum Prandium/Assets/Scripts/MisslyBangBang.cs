@@ -28,5 +28,9 @@ public class MisslyBangBang : MonoBehaviour {
             GameObject.Destroy(collision.gameObject);
             GameObject.Destroy(gameObject);
         }
+        else if(collision.gameObject.layer != LayerMask.NameToLayer("Player"))
+        {
+            GameObject.Destroy(gameObject);
+        }
     }
 }
