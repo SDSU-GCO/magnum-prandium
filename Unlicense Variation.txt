@@ -26,10 +26,10 @@ For more information, please refer to <http://unlicense.org>
 
 Please note that this license applies only to code and assets developed by 
 GCO for this project, not code or assets provided by Unity Technologies.  
-To obtain a liciense to the Unity Game Engine(If anyone wishes to use it to 
-compile or modify the game) they must obtain a lisence from Unity Technologies. 
+To obtain a license to the Unity Game Engine(If anyone wishes to use it to 
+compile or modify the game) they must obtain a license from Unity Technologies. 
 GCO does not have the licencing rights to redistribute the Unity Game 
-Engine or it’s source code, nor the ability to transfer our license to use 
+Engine or itâ€™s source code, nor the ability to transfer our license to use 
 the Unity Game Engine, and thus grants no such rights.  Please see https://unity3d.com/ 
 for more information about getting your own copy of unity and licences 
 provided by Unity Technologies.
