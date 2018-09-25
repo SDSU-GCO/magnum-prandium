@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GunnyGunPeaShooter : MonoBehaviour
+public class GunnyGunPeaShooterObjectController : MonoBehaviour
 {
 
     [SerializeField]

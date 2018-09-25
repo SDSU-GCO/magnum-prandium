@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaggerSceneDataTagger : MonoBehaviour {
+public class SceneDataTagger : MonoBehaviour {
     
     private void Awake()
     {
@@ -13,6 +13,9 @@ public class TaggerSceneDataTagger : MonoBehaviour {
     private void OnDestroy()
     {
         Debug.Assert(SceneController.sceneData == gameObject, "There should only be one scene data in the scene!, found: " + SceneController.sceneData + " Expected: " + gameObject);
-        SceneController.sceneData = null;
+        if(SceneController.sceneData==gameObject)
+        {
+            SceneController.sceneData = null;
+        }
     }
 }

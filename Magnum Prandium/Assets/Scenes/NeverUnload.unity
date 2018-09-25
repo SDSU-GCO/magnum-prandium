@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1258602257249744, guid: df52cd23c44043a4f8c3d7f67d4b0465, type: 2}
       propertyPath: m_Name
-      value: globalDataObject
+      value: GameData
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df52cd23c44043a4f8c3d7f67d4b0465, type: 2}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 347821761}
   - component: {fileID: 347821762}
   m_Layer: 0
-  m_Name: Cardinal
+  m_Name: Cardinal (GameController)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a300f4a792e8d8b4b8f92cecb28b645a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultLevel: WeaponsTesting
 --- !u!1001 &681309805
 Prefab:
   m_ObjectHideFlags: 0
@@ -240,6 +241,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1633906024185550, guid: 559cc3c1934676847944e5c771ac3424, type: 2}
+      propertyPath: m_Name
+      value: Cardinal (GameController)
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 559cc3c1934676847944e5c771ac3424, type: 2}
@@ -255,7 +260,7 @@ GameObject:
   - component: {fileID: 912877883}
   - component: {fileID: 912877882}
   m_Layer: 0
-  m_Name: globalDataObject
+  m_Name: GameData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

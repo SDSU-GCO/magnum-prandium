@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimations : MonoBehaviour {
+public class PlayerAnimationsObjectController : MonoBehaviour {
 
     Animator animator;
     public float T = 0.01F;

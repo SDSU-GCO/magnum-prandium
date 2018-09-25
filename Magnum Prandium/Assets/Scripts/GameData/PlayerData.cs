@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class ScoreData : MonoBehaviour {
-
+[Serializable]
+public class PlayerData : MonoBehaviour {
     [SerializeField]
-    public int score = 0;
+    public int HP = 3;
 }

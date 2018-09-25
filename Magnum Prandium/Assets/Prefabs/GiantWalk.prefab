@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe15a405a9ebfa4a8f8f13cffd3981e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prey: {fileID: 1074282634134986, guid: 1b3ab0b47f86b004292dcbbfddcf9f96, type: 2}
+  speed: 2
 --- !u!212 &212857240991770936
 SpriteRenderer:
   m_ObjectHideFlags: 1

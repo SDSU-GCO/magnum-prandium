@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class MisslyBangBang : MonoBehaviour {
+public class MisslyBangBangObjectController : MonoBehaviour {
 
     [SerializeField]
     float lifetimeInSeconds=10;

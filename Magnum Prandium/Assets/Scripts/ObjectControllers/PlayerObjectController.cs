@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class PlayerObjectController : MonoBehaviour
 {
     float dashCoolDown = 0;
     Vector2 dashBonusSpeed;
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     
     public void takeDamage(int damage)
     {
-        GameManager.globalDataObject.GetComponent<PlayerData>().HP -= damage;
+        GameController.globalDataObject.GetComponent<PlayerData>().HP -= damage;
     }
 
     void Start()
