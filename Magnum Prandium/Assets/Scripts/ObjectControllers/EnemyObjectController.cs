@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyObjectController : MonoBehaviour {
 
+    [SerializeField]
     float speed = 2;
     new Rigidbody2D rigidbody2D = null;
     EnemyData enemyData = null;
     PreyData preyData = null;
     GameObject prey = null;
-    
 
     private void Start()
     {
@@ -58,6 +58,11 @@ public class EnemyObjectController : MonoBehaviour {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Player"))//if we collided with player
         {
             collision.gameObject.GetComponent<PlayerObjectController>().takeDamage(1);//injure player
+            ShakyShakeEarthquakeObjectController shakyShakeEarthquakeObjectController = SceneController.sceneController.GetComponentInChildren<ShakyShakeEarthquakeObjectController>();
+            if (shakyShakeEarthquakeObjectController != null)
+            {
+                shakyShakeEarthquakeObjectController.rockTheBoat();
+            }
 
             GameObject.Destroy(gameObject);//selfdestruct
         }
