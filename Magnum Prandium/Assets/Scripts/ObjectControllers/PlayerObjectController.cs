@@ -43,6 +43,7 @@ public class PlayerObjectController : MonoBehaviour
         {
             dashBonusSpeed = RigidbodyRef.velocity * (dashMultiplier - 1);
             dashCoolDown = dashCoolDownDefault;
+            GameController.gameController.GetComponent<TimeyWimeyGameController>().triggerSlowMo();
         }
 
         if(dashCoolDown>0)
