@@ -169,6 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347821761}
   - component: {fileID: 347821762}
+  - component: {fileID: 347821763}
   m_Layer: 0
   m_Name: Cardinal (GameController)
   m_TagString: Untagged
@@ -202,6 +203,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultLevel: WeaponsTesting
+--- !u!114 &347821763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347821760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499dfa206c869b42b5573e422e91317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeMultiplier: 0.5
+  effectDuration: 2
+  fadeIn: 0
+  fadeOut: 1
 --- !u!1001 &681309805
 Prefab:
   m_ObjectHideFlags: 0

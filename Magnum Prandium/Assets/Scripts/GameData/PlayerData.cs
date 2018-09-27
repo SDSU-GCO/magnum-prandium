@@ -5,6 +5,5 @@ using System;
 
 [Serializable]
 public class PlayerData : MonoBehaviour {
-    [SerializeField]
     public int HP = 3;
 }
