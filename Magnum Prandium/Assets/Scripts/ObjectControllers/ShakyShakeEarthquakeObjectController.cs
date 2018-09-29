@@ -15,6 +15,7 @@ public class ShakyShakeEarthquakeObjectController : MonoBehaviour {
     [SerializeField]
     public float fadeOut=0.25f;
     
+    
     private struct Transformation
     {
         public Vector2 vector2;
@@ -43,7 +44,10 @@ public class ShakyShakeEarthquakeObjectController : MonoBehaviour {
     {
         magnitudePos /= Vector2.Distance(transform.position, this.transform.position);
         magnitudeRot /= Vector2.Distance(transform.position, this.transform.position);
-        StartCoroutine(ShakeObject2D(duration, magnitudePos, magnitudeRot, fadeIn, fadeOut));
+        float delayFactor = 10;
+        float delay = Vector2.Distance(transform.position, this.transform.position) / delayFactor;
+
+        StartCoroutine(ShakeObject2D(duration, magnitudePos, magnitudeRot, fadeIn, fadeOut, delay));
     }
 
     public void Update()
@@ -56,8 +60,14 @@ public class ShakyShakeEarthquakeObjectController : MonoBehaviour {
         transformations.Clear();
     }
 
-    IEnumerator ShakeObject2D(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut)
+    IEnumerator ShakeObject2D(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut, float delay=0)
     {
+        float delayEnd = Time.time + delay;
+        while(delayEnd>Time.time)
+        {
+            yield return null;
+        }
+
         float currentDuration = 0;
         float fadeInCompletedTime = duration * fadeIn;
         float fadeOutStartTime = duration - (duration * fadeOut);
