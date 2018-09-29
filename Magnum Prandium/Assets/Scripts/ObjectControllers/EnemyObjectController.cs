@@ -14,15 +14,15 @@ public class EnemyObjectController : MonoBehaviour {
     private void Start()
     {
 
-        enemyData = SceneController.sceneData.GetComponent<EnemyData>();
-        Debug.Assert(enemyData != null, "Error, enemyData appears to be null please make sure a enemyData component is on the SceneData gameObject! debug info:\nsceneData: " + SceneController.sceneData + "\nthis: " + this + "\ngameObject: " + gameObject);
+        enemyData = SceneSupervisor.sceneData.GetComponent<EnemyData>();
+        Debug.Assert(enemyData != null, "Error, enemyData appears to be null please make sure a enemyData component is on the SceneData gameObject! debug info:\nsceneData: " + SceneSupervisor.sceneData + "\nthis: " + this + "\ngameObject: " + gameObject);
         enemyData.enemyCount++;
 
         rigidbody2D = GetComponent<Rigidbody2D>();
         
         #region setPrey()
-        preyData = SceneController.sceneData.GetComponent<PreyData>();
-        Debug.Assert(preyData != null, "Error, preyData appears to be null please make sure a PreyData component is on the SceneData gameObject! debug info:\nsceneData: " + SceneController.sceneData + "\nthis: " + this + "\ngameObject: " + gameObject);
+        preyData = SceneSupervisor.sceneData.GetComponent<PreyData>();
+        Debug.Assert(preyData != null, "Error, preyData appears to be null please make sure a PreyData component is on the SceneData gameObject! debug info:\nsceneData: " + SceneSupervisor.sceneData + "\nthis: " + this + "\ngameObject: " + gameObject);
 
         float? distanceToNearestPrey = null;
         foreach (GameObject possiblePrey in preyData.preyList)
@@ -58,7 +58,7 @@ public class EnemyObjectController : MonoBehaviour {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Player"))//if we collided with player
         {
             collision.gameObject.GetComponent<PlayerObjectController>().takeDamage(1);//injure player
-            ShakyShakeEarthquakeObjectController shakyShakeEarthquakeObjectController = SceneController.sceneController.GetComponentInChildren<ShakyShakeEarthquakeObjectController>();
+            ShakyShakeEarthquakeObjectController shakyShakeEarthquakeObjectController = SceneSupervisor.sceneSupervisor.GetComponentInChildren<ShakyShakeEarthquakeObjectController>();
             if (shakyShakeEarthquakeObjectController != null)
             {
                 shakyShakeEarthquakeObjectController.rockTheBoat();

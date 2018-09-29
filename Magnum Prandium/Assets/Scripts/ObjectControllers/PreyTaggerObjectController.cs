@@ -11,8 +11,8 @@ public class PreyTaggerObjectController : MonoBehaviour {
     {
         if(preyList==null)
         {
-            Debug.Assert(SceneController.sceneData != null, "Error: reference to sceneData in SceneController is null!");
-            preyList = SceneController.sceneData.GetComponent<PreyData>().preyList;
+            Debug.Assert(SceneSupervisor.sceneData != null, "Error: reference to sceneData in SceneController is null!");
+            preyList = SceneSupervisor.sceneData.GetComponent<PreyData>().preyList;
             Debug.Assert(preyList != null, "Error: reference to preyList in \"" + this + "\" is null!");
             preyList.Add(gameObject);
         }
@@ -21,8 +21,8 @@ public class PreyTaggerObjectController : MonoBehaviour {
     {
         if (preyList == null)
         {
-            Debug.Assert(SceneController.sceneData != null, "Error: reference to sceneData in SceneController is null!");
-            preyList = SceneController.sceneData.GetComponent<PreyData>().preyList;
+            Debug.Assert(SceneSupervisor.sceneData != null, "Error: reference to sceneData in SceneController is null!");
+            preyList = SceneSupervisor.sceneData.GetComponent<PreyData>().preyList;
             Debug.Assert(preyList != null, "Error: reference to preyList in \"" + this + "\" is null!");
             preyList.Add(gameObject);
         }

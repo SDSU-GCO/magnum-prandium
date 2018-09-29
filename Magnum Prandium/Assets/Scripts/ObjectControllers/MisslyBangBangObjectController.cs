@@ -23,7 +23,7 @@ public class MisslyBangBangObjectController : MonoBehaviour {
     {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Enemy"))
         {
-            SceneController.sceneData.GetComponent<ScoreData>().score+=1;
+            SceneSupervisor.sceneData.GetComponent<ScoreData>().score+=1;
 
             GameObject.Destroy(collision.gameObject);
             GameObject.Destroy(gameObject);

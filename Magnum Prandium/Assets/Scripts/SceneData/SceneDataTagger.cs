@@ -6,16 +6,16 @@ public class SceneDataTagger : MonoBehaviour {
     
     private void Awake()
     {
-        Debug.Assert(SceneController.sceneData == null, "There should only be one scene data in the scene!, found: " + SceneController.sceneData + " Expected: null");
-        SceneController.sceneData = gameObject;
+        Debug.Assert(SceneSupervisor.sceneData == null, "There should only be one scene data in the scene!, found: " + SceneSupervisor.sceneData + " Expected: null");
+        SceneSupervisor.sceneData = gameObject;
     }
 
     private void OnDestroy()
     {
-        Debug.Assert(SceneController.sceneData == gameObject, "There should only be one scene data in the scene!, found: " + SceneController.sceneData + " Expected: " + gameObject);
-        if(SceneController.sceneData==gameObject)
+        Debug.Assert(SceneSupervisor.sceneData == gameObject, "There should only be one scene data in the scene!, found: " + SceneSupervisor.sceneData + " Expected: " + gameObject);
+        if(SceneSupervisor.sceneData==gameObject)
         {
-            SceneController.sceneData = null;
+            SceneSupervisor.sceneData = null;
         }
     }
 }

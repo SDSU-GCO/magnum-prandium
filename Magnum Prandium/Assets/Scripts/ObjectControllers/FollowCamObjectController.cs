@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCam : MonoBehaviour {
+public class FollowCamObjectController : MonoBehaviour {
 
     public GameObject cameraDollyTarget = null;
 

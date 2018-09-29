@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ActiveSceneTaggerSceneController : MonoBehaviour {
+public class ActiveSceneTaggerSceneSupervisor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

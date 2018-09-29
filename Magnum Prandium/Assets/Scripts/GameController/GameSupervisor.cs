@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class GameSupervisor : MonoBehaviour {
 
-    public static GameController gameController = null;
+    public static GameSupervisor gameSupervisor = null;
     public static GameObject globalDataObject = null;
     [SerializeField]
     string defaultLevel = "";
     
     private void Awake()
     {
-        Debug.Assert(gameController == null, "There should only be one game manager in the game!, found: " + gameController + " Expected: null");
-        gameController = this;
+        Debug.Assert(gameSupervisor == null, "There should only be one game manager in the game!, found: " + gameSupervisor + " Expected: null");
+        gameSupervisor = this;
     }
     private void OnDestroy()
     {
-        Debug.Assert(gameController == this, "There should only be one game manager in the game!, found: " + gameController + " Expected: "+this );
-        gameController = null;
+        Debug.Assert(gameSupervisor == this, "There should only be one game manager in the game!, found: " + gameSupervisor + " Expected: "+this );
+        gameSupervisor = null;
     }
 
     //game initial load instructions

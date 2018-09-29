@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 347821761}
   - component: {fileID: 347821762}
   m_Layer: 0
-  m_Name: Cardinal (GameController)
+  m_Name: Cardinal (GameSupervisor)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1633906024185550, guid: 559cc3c1934676847944e5c771ac3424, type: 2}
       propertyPath: m_Name
-      value: Cardinal (GameController)
+      value: Cardinal (GameSupervisor)
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
