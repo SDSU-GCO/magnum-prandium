@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneStateSceneController : MonoBehaviour
+public class SceneStateSceneSupervisor : MonoBehaviour
 {
     PlayerData playerData = null;
     EnemyData enemyData = null;
     
     public void Start()
     {
-        playerData = GameController.globalDataObject.GetComponent<PlayerData>();
+        playerData = GameSupervisor.globalDataObject.GetComponent<PlayerData>();
         Debug.Assert(playerData != null, "Error in " + this + " the playerData is null!");
-        enemyData = SceneController.sceneData.GetComponent<EnemyData>();
+        enemyData = SceneSupervisor.sceneData.GetComponent<EnemyData>();
         Debug.Assert(enemyData != null, "Error in " + this + " the enemyData is null!");
     }
 

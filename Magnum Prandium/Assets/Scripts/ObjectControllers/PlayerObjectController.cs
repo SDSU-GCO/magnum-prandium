@@ -17,7 +17,7 @@ public class PlayerObjectController : MonoBehaviour
     
     public void takeDamage(int damage)
     {
-        GameController.globalDataObject.GetComponent<PlayerData>().HP -= damage;
+        GameSupervisor.globalDataObject.GetComponent<PlayerData>().HP -= damage;
     }
 
     void Start()
