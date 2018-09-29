@@ -21,10 +21,28 @@ public class ShakyShakeEarthquakeObjectController : MonoBehaviour {
         public float rotation;
     }
 
+    private void Start()
+    {
+        ShakeyShakeEarthquakeSceneSupervisor.shakeyShakeEarthquakeSceneSupervisor.RockTheBoat += rockTheBoat;
+        ShakeyShakeEarthquakeSceneSupervisor.shakeyShakeEarthquakeSceneSupervisor.RockTheBoatRelative += rockTheBoat;
+    }
+
     private List<Transformation> transformations = new List<Transformation>();
 
     public void rockTheBoat()
     {
+        StartCoroutine(ShakeObject2D(duration, magnitudePos, magnitudeRot, fadeIn, fadeOut));
+    }
+
+    public void rockTheBoat(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut)
+    {
+        StartCoroutine(ShakeObject2D(duration, magnitudePos, magnitudeRot, fadeIn, fadeOut));
+    }
+
+    public void rockTheBoat(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut, Transform transform)
+    {
+        magnitudePos /= Vector2.Distance(transform.position, this.transform.position);
+        magnitudeRot /= Vector2.Distance(transform.position, this.transform.position);
         StartCoroutine(ShakeObject2D(duration, magnitudePos, magnitudeRot, fadeIn, fadeOut));
     }
 
