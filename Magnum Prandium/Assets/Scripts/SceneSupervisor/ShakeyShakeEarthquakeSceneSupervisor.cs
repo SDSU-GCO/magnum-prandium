@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShakeyShakeEarthquakeSceneSupervisor : MonoBehaviour {
 
-    public static ShakeyShakeEarthquakeSceneSupervisor shakeyShakeEarthquakeSceneSupervisor = null;
+    static ShakeyShakeEarthquakeSceneSupervisor shakeyShakeEarthquakeSceneSupervisor = null;
     public delegate void rockTheBoatDelegate(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut);
     public delegate void rockTheBoatRelativeDelegate(float duration, float magnitudePos, float magnitudeRot, float fadeIn, float fadeOut, Transform transform);
 

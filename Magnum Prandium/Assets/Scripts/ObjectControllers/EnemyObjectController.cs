@@ -58,10 +58,18 @@ public class EnemyObjectController : MonoBehaviour {
         if(collision.gameObject.layer==LayerMask.NameToLayer("Player"))//if we collided with player
         {
             collision.gameObject.GetComponent<PlayerObjectController>().takeDamage(1);//injure player
-            ShakyShakeEarthquakeObjectController shakyShakeEarthquakeObjectController = SceneSupervisor.sceneSupervisor.GetComponentInChildren<ShakyShakeEarthquakeObjectController>();
-            if (shakyShakeEarthquakeObjectController != null)
+            ShakeyShakeEarthquakeSceneSupervisor shakeyShakeEarthquakeSceneSupervisor = SceneSupervisor.sceneSupervisor.GetComponent<ShakeyShakeEarthquakeSceneSupervisor>();
+            if (shakeyShakeEarthquakeSceneSupervisor != null)
             {
-                shakyShakeEarthquakeObjectController.rockTheBoat();
+                if (ShakyShakeEarthquakeCameraObjectController.shakyShakeEarthquakeCameraObjectController!=null)
+                {
+                    ShakyShakeEarthquakeCameraObjectController.shakyShakeEarthquakeCameraObjectController.ignoreDelay=true;
+                }
+                ShakeyShakeEarthquakeSceneSupervisor.implode(5, 1, 1, 0.4f, 0.4f, transform);
+                if (ShakyShakeEarthquakeCameraObjectController.shakyShakeEarthquakeCameraObjectController != null)
+                {
+                    ShakyShakeEarthquakeCameraObjectController.shakyShakeEarthquakeCameraObjectController.ignoreDelay = false;
+                }
             }
 
             GameObject.Destroy(gameObject);//selfdestruct
