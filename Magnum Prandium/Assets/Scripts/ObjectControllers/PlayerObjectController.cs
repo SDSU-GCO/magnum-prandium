@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerObjectController : MonoBehaviour
+public class PlayerObjectController : CombatantObjectController
 {
     float dashCoolDown = 0;
     Vector2 dashBonusSpeed;

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyObjectController : MonoBehaviour {
+public class EnemyObjectController : CombatantObjectController
+{
 
     float speed = 2;
     new Rigidbody2D rigidbody2D = null;
