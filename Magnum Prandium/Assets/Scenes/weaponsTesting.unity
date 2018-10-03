@@ -18129,6 +18129,116 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.fire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.lava
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.ice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.air
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.water
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.voidElem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.death
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.life
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.lightning
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.light
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.resistances.dark
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: RotationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: ForwardSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.hp.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.mp.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.strength.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.defense.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.stamina.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.dexterity.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.intelligence.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.critRate.baseStat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089070596952498, guid: 1b3ab0b47f86b004292dcbbfddcf9f96,
+        type: 2}
+      propertyPath: combatantStats.statBlock.luck.baseStat
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b3ab0b47f86b004292dcbbfddcf9f96, type: 2}
   m_IsPrefabAsset: 0
